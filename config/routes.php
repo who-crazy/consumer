@@ -60,14 +60,17 @@ Router::addGroup('/api/v1', function () {
     Router::post('/login', 'App\Controller\Api\UserController@login');
     //register
     Router::post('/register', 'App\Controller\Api\UserController@register');
+    //tag
+    Router::get('/collect/tags', 'App\Controller\Api\CollectTagController@index');
+    //list
+    Router::get('/collects', 'App\Controller\Api\CollectController@index');
+    //detail
+    Router::get('/collects/{id}', 'App\Controller\Api\CollectController@show');
+
+    //起名
+    Router::get('/calc/names', 'App\Controller\Api\CalcNameController@index');
 
     Router::addGroup('', function () {
-        //tag
-        Router::get('/collect/tags', 'App\Controller\Api\CollectTagController@index');
-        //list
-        Router::get('/collects', 'App\Controller\Api\CollectController@index');
-        //detail
-        Router::get('/collects/{id}', 'App\Controller\Api\CollectController@show');
 
         //praise，enshrine
         Router::put('/collect/actions', 'App\Controller\Api\CollectController@updateAction');
