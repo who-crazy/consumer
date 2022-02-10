@@ -12,7 +12,7 @@ declare(strict_types=1);
 use Hyperf\HttpServer\Router\Router;
 
 
-Router::get('/test', 'App\Controller\IndexController@index');
+//Router::get('/test', 'App\Controller\IndexController@index');
 
 /**
  * admin
