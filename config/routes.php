@@ -11,6 +11,9 @@ declare(strict_types=1);
  */
 use Hyperf\HttpServer\Router\Router;
 
+
+Router::get('/test', 'App\Controller\IndexController@index');
+
 /**
  * admin
  */
@@ -67,8 +70,10 @@ Router::addGroup('/api/v1', function () {
     //detail
     Router::get('/collects/{id}', 'App\Controller\Api\CollectController@show');
 
-    //起名
-    Router::get('/calc/names', 'App\Controller\Api\CalcNameController@index');
+    /****  calc name ******/
+
+    Router::get('/calc/names', 'App\Controller\Api\CalcNameController@genSanCai');
+    /**********/
 
     Router::addGroup('', function () {
 

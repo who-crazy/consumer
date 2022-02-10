@@ -28,6 +28,7 @@ class CollectController extends AbstractController
             ['tags', ''],   //根据标签查询,可多个，array
             ['is_tree', 0],
             ['is_all', 0],
+            ['page', 1],
         ], $this->request);
 
         try {

@@ -14,6 +14,7 @@
     "require": {
         "php": ">=7.3",
         "aliyuncs/oss-sdk-php": "^2.4",
+        "hyperf/async-queue": "^2.2",
         "hyperf/cache": "~2.2.0",
         "hyperf/command": "~2.2.0",
         "hyperf/config": "~2.2.0",

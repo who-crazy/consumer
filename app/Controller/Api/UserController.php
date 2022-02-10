@@ -11,7 +11,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Taoran\HyperfPackage\Core\AbstractController;
 use Taoran\HyperfPackage\Core\Code;
 use Taoran\HyperfPackage\Core\Verify;
-
+use Hyperf\HttpMessage\Stream\SwooleStream;
 class UserController extends AbstractController
 {
 
@@ -32,7 +32,9 @@ class UserController extends AbstractController
             $data =  $this->userService->login($params);
             return $this->responseCore->success($data);
         } catch (\Exception $e) {
-            return $this->responseCore->error($e->getMessage());
+            /*$data = json_encode($this->responseCore->error(Code::VALIDATE_ERROR, $e->getMessage()));
+            return $this->response->withStatus(Code::VALIDATE_ERROR)->withBody(new SwooleStream($data));*/
+            return $this->responseCore->error(Code::VALIDATE_ERROR, $e->getMessage());
         }
     }
 
@@ -50,7 +52,7 @@ class UserController extends AbstractController
             $data = $this->userService->register($params);
             return $this->responseCore->success($data ?? []);
         } catch (\Exception $e) {
-            return $this->responseCore->error($e->getMessage());
+            return $this->responseCore->error(Code::VALIDATE_ERROR, $e->getMessage());
         }
     }
 }
