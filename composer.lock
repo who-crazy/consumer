@@ -6369,11 +6369,11 @@
         },
         {
             "name": "taoran/hyperf-package",
-            "version": "v1.0.12",
+            "version": "v1.0.14",
             "source": {
                 "type": "git",
                 "url": "https://gitee.com/trsunshine/hyperf-package.git",
-                "reference": "122693fc8b4255c9c92d2a03272123e5691074fe"
+                "reference": "91f652abfcbb6e0c8ea6d01dbd53a285a0555271"
             },
             "require": {
                 "hyperf/di": "~2.2.0",
@@ -6389,12 +6389,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Taoran\\HyperfPackage\\": "src/"
-                },
                 "files": [
                     "src/Helpers/Function.php"
-                ]
+                ],
+                "psr-4": {
+                    "Taoran\\HyperfPackage\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -6412,7 +6412,7 @@
                 "package",
                 "util"
             ],
-            "time": "2022-01-25T11:00:19+00:00"
+            "time": "2022-02-10T08:27:46+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
