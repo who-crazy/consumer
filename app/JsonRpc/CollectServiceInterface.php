@@ -16,4 +16,5 @@ interface CollectServiceInterface
     public function comment($params);
     public function apply($params);
     public function applyCheck($params);
+    public function test($params);
 }

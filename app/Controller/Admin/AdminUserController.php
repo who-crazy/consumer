@@ -11,7 +11,7 @@ use Hyperf\Di\Annotation\Inject;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Contract\ResponseInterface;
 use Taoran\HyperfPackage\Core\Verify;
-use function Package\HyperfPackage\Helpers\Password\eq_password;
+use function Taoran\HyperfPackage\Helpers\Password\eq_password;
 use Taoran\HyperfPackage\Core\AbstractController;
 use Taoran\HyperfPackage\Core\Code;
 
